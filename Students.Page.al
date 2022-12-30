@@ -38,6 +38,7 @@ page 50100 Students
             action(Import)
             {
                 ApplicationArea = All;
+                Caption = 'Import From Excel';
                 ToolTip = 'Import Excel Data';
                 Image = Import;
                 Promoted = true;
@@ -51,7 +52,23 @@ page 50100 Students
                     ImportToBufferCodeunit.Run();
                 end;
             }
+            action(Insert)
+            {
+                ApplicationArea = All;
+                Caption = 'Insert From Buffer';
+                ToolTip = 'Insert From Buffer';
+                Image = Insert;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
 
+                trigger OnAction()
+                var
+                    InsertFromBufferCodeunit: Codeunit "Insert From Buffer";
+                begin
+                    InsertFromBufferCodeunit.Run();
+                end;
+            }
         }
     }
 }
