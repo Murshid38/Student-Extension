@@ -35,28 +35,11 @@ page 50100 Students
     {
         area(Processing)
         {
-            action(Import)
-            {
-                ApplicationArea = All;
-                Caption = 'Import From Excel';
-                ToolTip = 'Import Excel Data';
-                Image = Import;
-                Promoted = true;
-                PromotedOnly = true;
-                PromotedCategory = Process;
-
-                trigger OnAction()
-                var
-                    ImportToBufferCodeunit: Codeunit "Import To Buffer";
-                begin
-                    ImportToBufferCodeunit.Run();
-                end;
-            }
             action(Insert)
             {
                 ApplicationArea = All;
-                Caption = 'Insert From Buffer';
-                ToolTip = 'Insert From Buffer';
+                Caption = 'Insert From Excel';
+                ToolTip = 'Insert From Excel';
                 Image = Insert;
                 Promoted = true;
                 PromotedOnly = true;
@@ -64,9 +47,9 @@ page 50100 Students
 
                 trigger OnAction()
                 var
-                    InsertFromBufferCodeunit: Codeunit "Insert From Buffer";
+                    ImportToListCodeunit: Codeunit "Import To List";
                 begin
-                    InsertFromBufferCodeunit.Run();
+                    ImportToListCodeunit.Run();
                 end;
             }
         }

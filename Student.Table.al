@@ -25,9 +25,8 @@ table 50100 Student
             Caption = 'Date of Birth';
             DataClassification = CustomerContent;
         }
-
-
     }
+
     keys
     {
         key(PK; Id)
