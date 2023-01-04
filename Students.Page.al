@@ -35,11 +35,29 @@ page 50100 Students
     {
         area(Processing)
         {
+            // action(Insert)
+            // {
+            //     ApplicationArea = All;
+            //     Caption = 'Insert From Excel';
+            //     ToolTip = 'Insert From Excel';
+            //     Image = Insert;
+            //     Promoted = true;
+            //     PromotedOnly = true;
+            //     PromotedCategory = Process;
+
+            //     trigger OnAction()
+            //     var
+            //     // ImportToListCodeunit: Codeunit "Import To List";
+            //     begin
+            //         // ImportToListCodeunit.Run();
+            //     end;
+            // }
+
             action(Insert)
             {
                 ApplicationArea = All;
-                Caption = 'Insert From Excel';
-                ToolTip = 'Insert From Excel';
+                Caption = 'Insert From CSV';
+                ToolTip = 'Insert From CSV';
                 Image = Insert;
                 Promoted = true;
                 PromotedOnly = true;
@@ -47,9 +65,10 @@ page 50100 Students
 
                 trigger OnAction()
                 var
-                    ImportToListCodeunit: Codeunit "Import To List";
+                // ImportFromCSVXmlPort: XmlPort "Import From CSV";
                 begin
-                    ImportToListCodeunit.Run();
+                    //  ImportFromCSVXmlPort.Run();   
+                    Xmlport.Run(50100);
                 end;
             }
         }

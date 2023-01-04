@@ -14,11 +14,6 @@ table 50100 Student
         {
             Caption = 'Name';
             DataClassification = CustomerContent;
-
-            trigger OnValidate()
-            begin
-                Message('Hello World');
-            end;
         }
         field(3; DateOfBirth; Date)
         {
