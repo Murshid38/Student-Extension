@@ -20,10 +20,11 @@ xmlport 50100 "Import From CSV"
                 fieldelement(DateOfBirth; Student.DateOfBirth)
                 {
                 }
-                // trigger OnBeforeInsertRecord()
-                // begin
-
-                // end;
+                trigger OnBeforeInsertRecord()
+                begin
+                    if Student.Get(Student.Id) then
+                        currXMLport.Skip();
+                end;
             }
         }
     }

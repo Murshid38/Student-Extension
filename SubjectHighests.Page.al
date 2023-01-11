@@ -1,9 +1,9 @@
-page 50100 Students
+page 50101 "Subject Highests"
 {
     ApplicationArea = All;
-    Caption = 'Students';
+    Caption = 'Subject Highests';
     PageType = List;
-    SourceTable = Student;
+    SourceTable = "Subject Highest";
     UsageCategory = Lists;
 
     layout
@@ -12,20 +12,20 @@ page 50100 Students
         {
             repeater(General)
             {
-                field(Id; Rec.Id)
+                field(SubjectId; Rec.SubjectId)
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the value of the Id field.';
+                    ToolTip = 'Specifies the value of the SubjectId field.';
                 }
-                field(Name; Rec.Name)
+                field(StudentId; Rec.StudentId)
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the value of the Name field.';
+                    ToolTip = 'Specifies the value of the StudentId field.';
                 }
-                field(DateOfBirth; Rec.DateOfBirth)
+                field(Marks; Rec.Marks)
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the value of the Name field.';
+                    ToolTip = 'Specifies the value of the Marks field.';
                 }
             }
         }
@@ -38,8 +38,8 @@ page 50100 Students
             action(Insert)
             {
                 ApplicationArea = All;
-                Caption = 'Insert From CSV';
-                ToolTip = 'Insert From CSV';
+                Caption = 'Insert From CSV Sub';
+                ToolTip = 'Insert From CSV Sub';
                 Image = Insert;
                 Promoted = true;
                 PromotedOnly = true;
@@ -47,9 +47,9 @@ page 50100 Students
 
                 trigger OnAction()
                 var
-                    ImportFromCSVXmlPort: XmlPort "Import From CSV";
+                    ImportFromCSVSubXmlPort: XmlPort "Import From CSV Sub";
                 begin
-                    ImportFromCSVXmlPort.Run();
+                    ImportFromCSVSubXmlPort.Run();
                 end;
             }
         }
