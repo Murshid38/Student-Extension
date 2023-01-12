@@ -14,6 +14,11 @@ query 50100 "Student Details For Highest"
             {
             }
 
+            column(MaxMarks; Marks)
+            {
+                Method = Max;
+            }
+
             dataitem(Student; Student)
             {
                 DataItemLink = Id = Subject_Highest.StudentId;
