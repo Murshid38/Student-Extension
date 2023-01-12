@@ -17,16 +17,28 @@ query 50100 "Student Details For Highest"
             dataitem(Student; Student)
             {
                 DataItemLink = Id = Subject_Highest.StudentId;
-
-                // SqlJoinType = InnerJoin;
+                SqlJoinType = InnerJoin;
 
                 column(Id; Id)
                 {
+                    // ColumnFilter = Id = filter(< 3);
                 }
+
                 column(Name; Name)
                 {
+
                 }
+
+                // filter(DateOfBirth; DateOfBirth)
+                // {
+                // ColumnFilter = DateOfBirth = filter(= '8/8/1996');
+                // }
             }
         }
     }
+
+    trigger OnBeforeOpen()
+    begin
+        // CurrQuery.SetRange(CurrQuery.Id, 3);
+    end;
 }
