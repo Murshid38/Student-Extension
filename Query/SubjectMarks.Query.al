@@ -2,6 +2,7 @@ query 50101 "Subject Marks"
 {
     Caption = 'Subject Marks';
     QueryType = Normal;
+    OrderBy = descending(Subject1_Marks);
 
     elements
     {
@@ -28,7 +29,6 @@ query 50101 "Subject Marks"
                 column(Subject3_Marks; "Subject3 Marks")
                 {
                 }
-
             }
         }
     }

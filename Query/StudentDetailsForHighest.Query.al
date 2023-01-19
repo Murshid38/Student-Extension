@@ -5,18 +5,14 @@ query 50100 "Student Details For Highest"
 
     elements
     {
-        dataitem(Subject_Highest; "Subject Highest")
+        dataitem(Subject_Highest;
+        "Subject Highest")
         {
             column(SubjectId; SubjectId)
             {
             }
             column(Marks; Marks)
             {
-            }
-
-            column(MaxMarks; Marks)
-            {
-                Method = Max;
             }
 
             dataitem(Student; Student)
