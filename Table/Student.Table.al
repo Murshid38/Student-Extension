@@ -1,4 +1,4 @@
-table 50100 Student
+table 50148 Student
 {
     Caption = 'Student';
     DataClassification = CustomerContent;
@@ -20,6 +20,13 @@ table 50100 Student
             Caption = 'Date of Birth';
             DataClassification = CustomerContent;
         }
+        field(4; EMail; Text[255])
+        {
+            Caption = 'E-Mail Address';
+            ExtendedDatatype = EMail;
+            DataClassification = CustomerContent;
+        }
+
     }
 
     keys

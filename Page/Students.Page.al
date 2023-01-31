@@ -1,4 +1,4 @@
-page 50100 Students
+page 50146 Students
 {
     ApplicationArea = All;
     Caption = 'Students';
@@ -26,6 +26,11 @@ page 50100 Students
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Name field.';
+                }
+                field(EMail; Rec.EMail)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the E-Mail field.';
                 }
             }
         }

@@ -1,4 +1,4 @@
-table 50101 "Subject Highest"
+table 50147 "Subject Highest"
 {
     Caption = 'Subject Highest';
     DataClassification = ToBeClassified;

@@ -1,8 +1,8 @@
-table 50102 "Subject Marks"
+table 50146 "Subject Marks"
 {
     Caption = 'Subject Marks';
     DataClassification = ToBeClassified;
-    
+
     fields
     {
         field(1; StudentID; Integer)

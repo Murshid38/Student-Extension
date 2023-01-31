@@ -8,14 +8,15 @@
             "environmentType": "OnPrem",
             "server": "http://localhost:8080/BC190",
             "serverInstance": "BC190",
-            "authentication": "Windows",
-            "startupObjectId": 50100,
-            "startupObjectType": "Query",
+            "authentication": "UserPassword",
+            "startupObjectId": 50103,
+            "startupObjectType": "Page",
             "breakOnError": "All",
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-            "tenant": "default"
+            "tenant": "default",
+            "schemaUpdateMode": "ForceSync"
         }
     ]
 }

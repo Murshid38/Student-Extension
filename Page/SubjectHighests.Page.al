@@ -1,4 +1,4 @@
-page 50101 "Subject Highests"
+page 50145 "Subject Highests"
 {
     ApplicationArea = All;
     Caption = 'Subject Highests';

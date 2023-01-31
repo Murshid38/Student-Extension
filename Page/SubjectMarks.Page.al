@@ -1,11 +1,11 @@
-page 50102 "Subject Marks"
+page 50144 "Subject Marks"
 {
     ApplicationArea = All;
     Caption = 'Subject Marks';
     PageType = List;
     SourceTable = "Subject Marks";
     UsageCategory = Lists;
-    
+
     layout
     {
         area(content)

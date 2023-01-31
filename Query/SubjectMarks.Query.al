@@ -1,4 +1,4 @@
-query 50101 "Subject Marks"
+query 50146 "Subject Marks"
 {
     Caption = 'Subject Marks';
     QueryType = Normal;
@@ -35,6 +35,7 @@ query 50101 "Subject Marks"
 
     trigger OnBeforeOpen()
     begin
-
+        // CurrQuery.SetFilter(CurrQuery.Id, '<5');
+        // CurrQuery.TopNumberOfRows(3);
     end;
 }
