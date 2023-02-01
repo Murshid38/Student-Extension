@@ -31,6 +31,12 @@ page 50146 Students
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the E-Mail field.';
+                    Visible = false;
+                }
+                field("Total Marks"; Rec."Total Marks")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Total Marks field.';
                 }
             }
         }
@@ -43,8 +49,8 @@ page 50146 Students
             action(Insert)
             {
                 ApplicationArea = All;
-                Caption = 'Insert From CSV';
-                ToolTip = 'Insert From CSV';
+                Caption = 'Import Students';
+                ToolTip = 'Import Students';
                 Image = Insert;
                 Promoted = true;
                 PromotedOnly = true;
@@ -52,9 +58,9 @@ page 50146 Students
 
                 trigger OnAction()
                 var
-                    ImportFromCSVXmlPort: XmlPort "Import From CSV";
+                    ImportStudents: XmlPort "Import Students";
                 begin
-                    ImportFromCSVXmlPort.Run();
+                    ImportStudents.Run();
                 end;
             }
         }

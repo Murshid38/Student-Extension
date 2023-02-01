@@ -1,6 +1,6 @@
-xmlport 50147 "Import From CSV"
+xmlport 50148 "Import Students"
 {
-    Caption = 'Import From CSV';
+    Caption = 'Import Students';
     Format = VariableText;
     Direction = Import;
     UseRequestPage = false;

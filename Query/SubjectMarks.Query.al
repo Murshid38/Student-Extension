@@ -2,7 +2,6 @@ query 50146 "Subject Marks"
 {
     Caption = 'Subject Marks';
     QueryType = Normal;
-    OrderBy = descending(Subject1_Marks);
 
     elements
     {
@@ -20,15 +19,15 @@ query 50146 "Subject Marks"
                 DataItemLink = StudentID = Student.Id;
                 SqlJoinType = InnerJoin;
 
-                column(Subject1_Marks; "Subject1 Marks")
-                {
-                }
-                column(Subject2_Marks; "Subject2 Marks")
-                {
-                }
-                column(Subject3_Marks; "Subject3 Marks")
-                {
-                }
+                // column(Subject1_Marks; "Subject1 Marks")
+                // {
+                // }
+                // column(Subject2_Marks; "Subject2 Marks")
+                // {
+                // }
+                // column(Subject3_Marks; "Subject3 Marks")
+                // {
+                // }
             }
         }
     }

@@ -26,7 +26,12 @@ table 50148 Student
             ExtendedDatatype = EMail;
             DataClassification = CustomerContent;
         }
-
+        field(5; "Total Marks"; Integer)
+        {
+            Caption = 'Total Marks';
+            FieldClass = FlowField;
+            CalcFormula = sum("Subject Marks"."Marks" where(StudentID = field(Id)));
+        }
     }
 
     keys

@@ -10,25 +10,21 @@ table 50146 "Subject Marks"
             Caption = 'StudentID';
             DataClassification = CustomerContent;
         }
-        field(2; "Subject1 Marks"; Integer)
+        field(10; "Subject No."; Integer)
         {
-            Caption = 'Subject1 Marks';
+            Caption = 'Subject No.';
             DataClassification = CustomerContent;
         }
-        field(3; "Subject2 Marks"; Integer)
+        field(20; "Marks"; Integer)
         {
-            Caption = 'Subject2 Marks';
+            Caption = 'Subject Marks';
             DataClassification = CustomerContent;
         }
-        field(4; "Subject3 Marks"; Integer)
-        {
-            Caption = 'Subject3 Marks';
-            DataClassification = CustomerContent;
-        }
+
     }
     keys
     {
-        key(PK; StudentID)
+        key(PK; StudentID, "Subject No.")
         {
             Clustered = true;
         }

@@ -17,21 +17,39 @@ page 50144 "Subject Marks"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the StudentID field.';
                 }
-                field("Subject1 Marks"; Rec."Subject1 Marks")
+                field("Subject No."; Rec."Subject No.")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the value of the Subject1 Marks field.';
+                    ToolTip = 'Specifies the value of the Subject No. field.';
                 }
-                field("Subject2 Marks"; Rec."Subject2 Marks")
+                field(Marks; Rec.Marks)
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the value of the Subject2 Marks field.';
+                    ToolTip = 'Specifies the value of the Marks field.';
                 }
-                field("Subject3 Marks"; Rec."Subject3 Marks")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the value of the Subject3 Marks field.';
-                }
+            }
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action(Insert)
+            {
+                ApplicationArea = All;
+                Caption = 'Import Marks';
+                ToolTip = 'Import Marks';
+                Image = Insert;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    ImportMarks: XmlPort "Import Marks";
+                begin
+                    ImportMarks.Run();
+                end;
             }
         }
     }
