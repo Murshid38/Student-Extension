@@ -8,7 +8,7 @@ query 50147 "Student Details For Highest"
         dataitem(Subject_Highest;
         "Subject Highest")
         {
-            column(SubjectId; SubjectId)
+            column(SubjectNo; "Subject No.")
             {
             }
             column(Marks; Marks)

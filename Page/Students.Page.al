@@ -33,11 +33,11 @@ page 50146 Students
                     ToolTip = 'Specifies the value of the E-Mail field.';
                     Visible = false;
                 }
-                field("Total Marks"; Rec."Total Marks")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the value of the Total Marks field.';
-                }
+                // field("Total Marks"; Rec."Total Marks")
+                // {
+                //     ApplicationArea = All;
+                //     ToolTip = 'Specifies the value of the Total Marks field.';
+                // }
             }
         }
     }

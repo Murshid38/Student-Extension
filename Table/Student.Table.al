@@ -30,6 +30,7 @@ table 50148 Student
         {
             Caption = 'Total Marks';
             FieldClass = FlowField;
+            Editable = false;
             CalcFormula = sum("Subject Marks"."Marks" where(StudentID = field(Id)));
         }
     }
